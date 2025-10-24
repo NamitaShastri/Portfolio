@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Namita Shastri | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <div class="logo">Namita Shastri</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="service.html">Services</a>
-      <a href="skill.html">Skills</a>
-      <a href="Education.html">Education</a>
-      <a href="contact.html">Contact</a>
-      <a href="project.html">Projects</a>
-    </nav>
-  </header>
-
-  <section class="home">
-    <div class="home-img">
-      <img src="anime.jpg" alt="Namita Coding" />
+    <div id="startScreen">
+        <div class="player-input">
+            <label for="playerName">Enter Your Name:</label>
+            <input type="text" id="playerName" placeholder="Your Name" required>
+        </div>
+        
+        <h1 id="startTitle">Word Search Adventure</h1>
+        <button id="startGameBtn">Start Game</button>
     </div>
-    <div class="home-content">
-      <h1>Hello, It's <span>Namita</span></h1>
-      <h3 class="Typing-text">I'm a <span>Frontend Developer</span></h3>
-      <p>
-        Passionate Computer Science Engineering student with a creative spark for tech and design. I love building apps and websites that solve real-world problems with simple, user-friendly interfaces. From backend to frontend, I'm always eager to learn and explore new technologies.
-      </p>
-
-      <div class="social-icons">
-        <a href="https://github.com/NamitaShastri" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.cloudskillsboost.google/public_profiles/1f86bae0-73d4-4272-a88d-855ab9d9d6f0?locale=tr" target="_blank"><i class="fab fa-google"></i></a>
-        <a href="https://www.instagram.com/namita_shastri/" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-
-      <a href="mailto:shastrinamita08@gmail.com" class="btn hire-btn">Hire me</a>
-
+    
+    <div id="gameContainer" class="container" style="display: none; opacity: 0;">
+        <h1>Word Search Game</h1>
+        <!-- <p id="level">Level: </p> -->
+        <p id="score">Score: 0</p>
+        <p id="timer">Time: 50s</p>
+        <div id="playerDisplay" class="player-info"></div>
+        <div id="grid" class="grid"></div>
+        <ul id="words"></ul>
+        <button id="restart" class="btn">Restart</button>
     </div>
-  </section>
-
+    <div id="levelCompletionOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="overlayTitle"></h2>
+            <p id="overlaySubtitle"></p>
+            <div id="progressBarContainer">
+                <div id="progressBar"></div>
+            </div>
+            <button id="nextLevelBtn">Next Level</button>
+            <button id="completeGameBtn" class="btn" style="display: none;">Completed All Levels</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <script src="WordSearch.js"></script>
 </body>
 </html>
-
-
-
