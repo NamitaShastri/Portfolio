@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <div class="player-input">
+            <label for="playerName">Enter Your Name:</label>
+            <input type="text" id="playerName" placeholder="Your Name" required>
+        </div>
+        
+        <h1 id="startTitle">Word Search Adventure</h1>
+        <button id="startGameBtn">Start Game</button>
+    </div>
+    
+    <div id="gameContainer" class="container" style="display: none; opacity: 0;">
+        <h1>Word Search Game</h1>
+        <!-- <p id="level">Level: </p> -->
+        <p id="score">Score: 0</p>
+        <p id="timer">Time: 50s</p>
+        <div id="playerDisplay" class="player-info"></div>
+        <div id="grid" class="grid"></div>
+        <ul id="words"></ul>
+        <button id="restart" class="btn">Restart</button>
+    </div>
+    <div id="levelCompletionOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="overlayTitle"></h2>
+            <p id="overlaySubtitle"></p>
+            <div id="progressBarContainer">
+                <div id="progressBar"></div>
+            </div>
+            <button id="nextLevelBtn">Next Level</button>
+            <button id="completeGameBtn" class="btn" style="display: none;">Completed All Levels</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <script src="WordSearch.js"></script>
+</body>
+</html>
