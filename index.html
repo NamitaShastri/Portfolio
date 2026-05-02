@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namita Shastri — Digital Command Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">NS://</div>
+    <div class="loader-title">NAMITA OS</div>
+    <div class="loader-version">v3.0 — NEURAL BOOT SEQUENCE</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-status" id="loader-status">INITIALIZING SYSTEMS...</div>
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+
+
+<canvas id="bg-canvas"></canvas>
+<canvas id="circuit-canvas"></canvas>
+<div id="scanlines"></div>
+<div id="bg-mode-toggle" title="Toggle Visual Mode">
+  <span id="bg-mode-label">NEURAL</span>
+</div>
+
+
+<nav id="navbar">
+  <div class="nav-logo">NS<span class="logo-accent">://</span></div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero"       class="nav-link active">HOME</a></li>
+    <li><a href="#about"      class="nav-link">ABOUT</a></li>
+    <li><a href="#skills"     class="nav-link">SKILLS</a></li>
+    <li><a href="#certs"      class="nav-link">CERTS</a></li>
+    <li><a href="#projects"   class="nav-link">PROJECTS</a></li>
+    <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+    <li><a href="#contact"    class="nav-link">TERMINAL</a></li>
+  </ul>
+  <div class="nav-status">
+    <span class="status-dot"></span>
+    <span class="status-text">ONLINE</span>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════ HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+
+  <div class="hero-content">
+    <div class="avatar-system">
+      <div class="ring ring-outer"></div>
+      <div class="ring ring-mid"></div>
+      <div class="ring ring-inner"></div>
+      <div class="avatar-core"><div class="avatar-initials glitch-text" data-text="NS">NS</div></div>
+      <div class="avatar-orbit-dot dot-1"></div>
+      <div class="avatar-orbit-dot dot-2"></div>
+      <div class="avatar-orbit-dot dot-3"></div>
+    </div>
+
+    <div class="hero-badge">
+      <span class="badge-dot"></span> SYSTEM ACTIVE // PROFILE LOADED
+    </div>
+
+    <h1 class="hero-name glitch" data-text="NAMITA SHASTRI">NAMITA SHASTRI</h1>
+
+    <div class="typewriter-wrap">
+      <span class="type-prefix">$ identify --role </span>
+      <span id="typewriter"></span><span class="cursor-blink">_</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary"><span class="btn-icon">⬡</span> EXPLORE PROJECTS</a>
+      <a href="#contact"  class="btn btn-secondary"><span class="btn-icon">⌘</span> CONTACT TERMINAL</a>
+      <a href="#"         class="btn btn-ghost" id="resume-btn"><span class="btn-icon">↓</span> DOWNLOAD RESUME</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card"><div class="stat-value" data-target="9.96" data-float="true">0</div><div class="stat-label">CPI Score</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="20">0</div><div class="stat-label">O Grades</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="5">0</div><div class="stat-label">Tech Talks</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="8">0</div><div class="stat-label">Projects</div></div>
+    </div>
+
+    <div class="float-code fc-1"><span class="fc-comment">// AI/ML Explorer</span></div>
+    <div class="float-code fc-2"><span class="fc-kw">import</span> quantum</div>
+    <div class="float-code fc-3">CPI = <span class="fc-num">9.96</span></div>
+    <div class="float-code fc-4"><span class="fc-comment">// Backend Builder</span></div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div><span>SCROLL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ABOUT -->
+<section id="about" class="section">
+  <div class="section-header">
+    <div class="section-tag">// IDENTITY MODULE</div>
+    <h2 class="section-title hologram-flicker">About Me</h2>
+    <div class="section-sub">PROFILE DATABASE // CLASSIFIED TIER-1</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card glass-card reveal-item">
+      <div class="card-tag cyan-tag">⬡ THE BUILDER</div>
+      <p>CSE student with a near-perfect CPI of <strong>9.96</strong>. I design intelligent backend systems, explore machine learning pipelines, and study core CS fundamentals with relentless curiosity — driven by a vision to build systems that <strong>think, scale, and matter</strong>.</p>
+      <div class="orbit-tags">
+        <span class="otag cyan-otag">AI/ML</span>
+        <span class="otag purple-otag">Backend</span>
+        <span class="otag green-otag">DSA</span>
+        <span class="otag magenta-otag">Quantum</span>
+        <span class="otag cyan-otag">COA</span>
+        <span class="otag purple-otag">Systems</span>
+      </div>
+    </div>
+
+    <div class="about-card glass-card reveal-item" style="animation-delay:0.15s">
+      <div class="card-tag purple-tag">◈ THE LEADER</div>
+      <p>Co-Head of <strong>CodeOrbit</strong>, a tech club shaping the next wave of developers. Delivered talks at AI/CSE events, mentored peers in competitive programming, and led cross-functional teams. I believe leadership and engineering are two sides of the same system.</p>
+      <div class="philosophy-box">
+        <div class="phil-label">PHILOSOPHY.exe</div>
+        <div class="phil-text">"Build systems that think. Lead teams that grow. Code that matters."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="journey-wrap reveal-item">
+    <div class="journey-label">◆ JOURNEY TIMELINE</div>
+    <div class="journey-bar">
+      <div class="journey-phase cyan-phase">
+        <div class="phase-num">PHASE 01</div>
+        <div class="phase-title">Diploma</div>
+        <div class="phase-sub">Core CS Foundation</div>
+      </div>
+      <div class="phase-arrow">→</div>
+      <div class="journey-phase purple-phase">
+        <div class="phase-num">PHASE 02</div>
+        <div class="phase-title">Leadership</div>
+        <div class="phase-sub">CodeOrbit Co-Head</div>
+      </div>
+      <div class="phase-arrow">→</div>
+      <div class="journey-phase green-phase">
+        <div class="phase-num">PHASE 03</div>
+        <div class="phase-title">AI + Backend</div>
+        <div class="phase-sub">Building & Speaking</div>
+      </div>
+      <div class="phase-arrow">→</div>
+      <div class="journey-phase magenta-phase">
+        <div class="phase-num">PHASE 04</div>
+        <div class="phase-title">Quantum Horizon</div>
+        <div class="phase-sub">Next Frontier</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="skills" class="section">
+  <div class="section-header">
+    <div class="section-tag">// CAPABILITY MATRIX</div>
+    <h2 class="section-title hologram-flicker">Skills</h2>
+    <div class="section-sub">TECH STACK // PROFICIENCY GRID</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-panel glass-card reveal-item">
+      <div class="skill-cat-title cyan-tag">⬡ PROGRAMMING</div>
+      <div class="skill-item"><div class="skill-name-row"><span>Java</span><span class="skill-pct cyan-text">90%</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" data-w="90"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Python</span><span class="skill-pct cyan-text">88%</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" data-w="88"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>C / C++</span><span class="skill-pct cyan-text">78%</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>JavaScript</span><span class="skill-pct cyan-text">70%</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" data-w="70"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>SQL</span><span class="skill-pct cyan-text">75%</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" data-w="75"></div></div></div>
+    </div>
+
+    <div class="skill-panel glass-card reveal-item" style="animation-delay:0.1s">
+      <div class="skill-cat-title green-tag">◈ AI / ML</div>
+      <div class="skill-item"><div class="skill-name-row"><span>NumPy / Pandas</span><span class="skill-pct green-text">85%</span></div><div class="skill-bar"><div class="skill-fill fill-green" data-w="85"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>scikit-learn</span><span class="skill-pct green-text">75%</span></div><div class="skill-bar"><div class="skill-fill fill-green" data-w="75"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>TensorFlow</span><span class="skill-pct green-text">65%</span></div><div class="skill-bar"><div class="skill-fill fill-green" data-w="65"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Data Visualization</span><span class="skill-pct green-text">78%</span></div><div class="skill-bar"><div class="skill-fill fill-green" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>ML Pipelines</span><span class="skill-pct green-text">68%</span></div><div class="skill-bar"><div class="skill-fill fill-green" data-w="68"></div></div></div>
+    </div>
+
+    <div class="skill-panel glass-card reveal-item" style="animation-delay:0.2s">
+      <div class="skill-cat-title purple-tag">◆ CORE CS</div>
+      <div class="skill-item"><div class="skill-name-row"><span>DSA</span><span class="skill-pct purple-text">92%</span></div><div class="skill-bar"><div class="skill-fill fill-purple" data-w="92"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>COA</span><span class="skill-pct purple-text">88%</span></div><div class="skill-bar"><div class="skill-fill fill-purple" data-w="88"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Operating Systems</span><span class="skill-pct purple-text">85%</span></div><div class="skill-bar"><div class="skill-fill fill-purple" data-w="85"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>DBMS</span><span class="skill-pct purple-text">82%</span></div><div class="skill-bar"><div class="skill-fill fill-purple" data-w="82"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Computer Networks</span><span class="skill-pct purple-text">76%</span></div><div class="skill-bar"><div class="skill-fill fill-purple" data-w="76"></div></div></div>
+    </div>
+
+    <div class="skill-panel glass-card reveal-item" style="animation-delay:0.3s">
+      <div class="skill-cat-title magenta-tag">✦ BACKEND + LEADERSHIP</div>
+      <div class="skill-item"><div class="skill-name-row"><span>REST APIs</span><span class="skill-pct magenta-text">78%</span></div><div class="skill-bar"><div class="skill-fill fill-magenta" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Flask / Node Basics</span><span class="skill-pct magenta-text">70%</span></div><div class="skill-bar"><div class="skill-fill fill-magenta" data-w="70"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Authentication</span><span class="skill-pct magenta-text">72%</span></div><div class="skill-bar"><div class="skill-fill fill-magenta" data-w="72"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Public Speaking</span><span class="skill-pct magenta-text">90%</span></div><div class="skill-bar"><div class="skill-fill fill-magenta" data-w="90"></div></div></div>
+      <div class="skill-item"><div class="skill-name-row"><span>Team Building</span><span class="skill-pct magenta-text">88%</span></div><div class="skill-bar"><div class="skill-fill fill-magenta" data-w="88"></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="certs" class="section">
+  <div class="section-header">
+    <div class="section-tag">// CERTIFICATION VAULT</div>
+    <h2 class="section-title hologram-flicker">Certificates</h2>
+    <div class="section-sub">CREDENTIAL MATRIX // VERIFIED STACK</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="certs-grid">
+    <div class="cert-card glass-card reveal-item">
+      <div class="cert-icon">🐍</div>
+      <div class="cert-body">
+        <div class="cert-name">Python Programming</div>
+        <div class="cert-platform">NPTEL / Coursera</div>
+        <div class="cert-desc">Core Python, OOP, file handling, libraries and scripting fundamentals.</div>
+      </div>
+      <div class="cert-status status-done">✓ COMPLETED</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.08s">
+      <div class="cert-icon">🤖</div>
+      <div class="cert-body">
+        <div class="cert-name">AI / ML Fundamentals</div>
+        <div class="cert-platform">Google / Coursera</div>
+        <div class="cert-desc">Supervised learning, model evaluation, neural network basics and ML workflows.</div>
+      </div>
+      <div class="cert-status status-done">✓ COMPLETED</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.16s">
+      <div class="cert-icon">🌐</div>
+      <div class="cert-body">
+        <div class="cert-name">Web Development</div>
+        <div class="cert-platform">freeCodeCamp</div>
+        <div class="cert-desc">HTML, CSS, JavaScript, responsive design and introductory backend concepts.</div>
+      </div>
+      <div class="cert-status status-done">✓ COMPLETED</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.24s">
+      <div class="cert-icon">🎤</div>
+      <div class="cert-body">
+        <div class="cert-name">Leadership & Public Speaking</div>
+        <div class="cert-platform">University / Internal</div>
+        <div class="cert-desc">Communication skills, presentation design, team leadership and audience engagement.</div>
+      </div>
+      <div class="cert-status status-done">✓ COMPLETED</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.32s">
+      <div class="cert-icon">📊</div>
+      <div class="cert-body">
+        <div class="cert-name">Data Analytics</div>
+        <div class="cert-platform">Google / IBM</div>
+        <div class="cert-desc">Data wrangling, visualization, statistical analysis and insight generation.</div>
+      </div>
+      <div class="cert-status status-ongoing">⟳ ONGOING</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.4s">
+      <div class="cert-icon">⚛️</div>
+      <div class="cert-body">
+        <div class="cert-name">Quantum Computing Basics</div>
+        <div class="cert-platform">IBM Quantum / MIT OCW</div>
+        <div class="cert-desc">Qubits, superposition, entanglement, quantum gates and circuit fundamentals.</div>
+      </div>
+      <div class="cert-status status-planned">◎ PLANNED</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item" style="animation-delay:0.48s">
+      <div class="cert-icon">🔧</div>
+      <div class="cert-body">
+        <div class="cert-name">Backend Development</div>
+        <div class="cert-platform">Udemy / Meta</div>
+        <div class="cert-desc">REST APIs, authentication, databases, Flask/Node server architecture.</div>
+      </div>
+      <div class="cert-status status-ongoing">⟳ ONGOING</div>
+    </div>
+
+    <div class="cert-card glass-card reveal-item cert-future" style="animation-delay:0.56s">
+      <div class="cert-icon">🚀</div>
+      <div class="cert-body">
+        <div class="cert-name">Future Certifications</div>
+        <div class="cert-platform">Incoming...</div>
+        <div class="cert-desc">Deep Learning, Cloud Architecture, Advanced Algorithms and more on the horizon.</div>
+      </div>
+      <div class="cert-status status-planned">◎ PLANNED</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="section-header">
+    <div class="section-tag">// PROJECT LAB</div>
+    <h2 class="section-title hologram-flicker">Projects</h2>
+    <div class="section-sub">SYSTEM ACCESS GRANTED // BUILD LOG</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="project-featured-wrap reveal-item">
+    <div class="glass-card project-featured-card">
+      <div class="project-featured-inner">
+        <div class="project-featured-info">
+          <span class="proj-tag tag-featured">★ FEATURED PROJECT</span>
+          <h3 class="proj-title">Smart Expense Tracker</h3>
+          <p class="proj-desc">A full-featured mobile application for intelligent expense management. Real-time categorization, visual spending analytics, budget alerts, and a clean Material Design UI. Built with local SQLite persistence — a project experience in end-to-end app development.</p>
+          <div class="tech-pills">
+            <span class="pill">Java</span><span class="pill">SQLite</span><span class="pill">MPAndroidChart</span><span class="pill">Material Design</span><span class="pill">SharedPreferences</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/NamitaShastri/Smart-Expense-Tracker.git" target="_blank" class="proj-link-btn">⬡ VIEW ON GITHUB →</a>
+            <a href="#" class="proj-link-btn proj-link-secondary">◈ DETAILS →</a>
+          </div>
+        </div>
+        <div class="project-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="app-header">💳 ExpenseTrack</div>
+              <div class="app-balance">₹ 24,580</div>
+              <div class="app-label">Monthly Balance</div>
+              <div class="app-bars">
+                <div class="app-bar-row"><span>Food</span><div class="app-bar"><div class="app-bar-fill" style="width:70%;background:var(--cyan)"></div></div></div>
+                <div class="app-bar-row"><span>Travel</span><div class="app-bar"><div class="app-bar-fill" style="width:45%;background:var(--purple)"></div></div></div>
+                <div class="app-bar-row"><span>Study</span><div class="app-bar"><div class="app-bar-fill" style="width:55%;background:var(--green)"></div></div></div>
+                <div class="app-bar-row"><span>Other</span><div class="app-bar"><div class="app-bar-fill" style="width:30%;background:var(--magenta)"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card glass-card reveal-item tilt-card">
+      <span class="proj-tag tag-ai">AI/ML</span>
+      <h3 class="proj-title-sm">SKill Connect</h3>
+      <p class="proj-desc-sm">SkillConnect is a full-stack web platform designed to connect students, faculty, and campus communities through skills, projects, clubs, and events. It enables users to showcase skills, collaborate on real projects, receive AI-powered skill recommendations, and build meaningful academic and professional networks within a university ecosystem.</p>
+      <div class="tech-pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">API</span></div>
+      <a href="https://github.com/NamitaShastri/Skill-Connect.git" target="_blank" class="proj-link">→ GITHUB</a>
+    </div>
+
+    <div class="project-card glass-card reveal-item tilt-card" style="animation-delay:0.1s">
+      <span class="proj-tag tag-backend">BACKEND</span>
+      <h3 class="proj-title-sm">StudyMate Lite Extension</h3>
+      <p class="proj-desc-sm">StudyMate Lite is a simple Chrome Extension that helps students stay organized and focused. This project also includes a small Node.js backend server used for handling API requests securely.</p>
+      <div class="tech-pills"><span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">Gemini API </span></div>
+      <a href="https://github.com/NamitaShastri/StudyMate-Lite.git" target="_blank" class="proj-link">→ GITHUB</a>
+    </div>
+
+</section>
+
+<section id="experience" class="section">
+  <div class="section-header">
+    <div class="section-tag">// MISSION LOGS</div>
+    <h2 class="section-title hologram-flicker">Experience</h2>
+    <div class="section-sub">LEADERSHIP // IMPACT // RECOGNITION</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item reveal-item">
+      <div class="tl-node tl-node-cyan"></div>
+      <div class="tl-content glass-card">
+        <div class="tl-year cyan-text">2025 - 2026</div>
+        <div class="tl-role">Co-Head, CodeOrbit</div>
+        <div class="tl-org purple-text">University Tech Club</div>
+        <p class="tl-desc">Leading technical workshops, organizing hackathons, and building a vibrant developer community. Mentoring junior students in DSA, backend development, and competitive programming. Drove club growth through flagship inter-college events.</p>
+        <div class="tl-tags"><span class="pill">Leadership</span><span class="pill">Mentoring</span><span class="pill">Event Management</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal-item" style="animation-delay:0.15s">
+      <div class="tl-node tl-node-purple"></div>
+      <div class="tl-content glass-card">
+        <div class="tl-year purple-text">2025</div>
+        <div class="tl-role">Tech Speaker — AI &amp; CSE</div>
+        <div class="tl-org purple-text">University Technical Events</div>
+        <p class="tl-desc">Delivered talks on Artificial Intelligence trends, machine learning applications in real life, and the evolving landscape of computer science. Engaged students and faculty with live demonstrations and interactive Q&amp;A.</p>
+        <div class="tl-tags"><span class="pill">Public Speaking</span><span class="pill">AI/ML</span><span class="pill">Knowledge Sharing</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal-item" style="animation-delay:0.3s">
+      <div class="tl-node tl-node-green"></div>
+      <div class="tl-content glass-card">
+        <div class="tl-year green-text">2026</div>
+        <div class="tl-role">Digital Marketing Team</div>
+        <div class="tl-org purple-text">Campus Organization</div>
+        <p class="tl-desc">Managed digital presence, content creation, and outreach campaigns for university events. Coordinated cross-functional teams and grew social media engagement for flagship technical fests.</p>
+        <div class="tl-tags"><span class="pill">Digital Marketing</span><span class="pill">Content</span><span class="pill">Teamwork</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="achievements-wrap">
+    <div class="section-tag" style="margin-bottom:20px;">◆ ACHIEVEMENT VAULT</div>
+    <div class="ach-grid">
+      <div class="ach-card glass-card reveal-item"><div class="ach-icon">🏆</div><div class="ach-val cyan-text">9.96</div><div class="ach-label">CPI / GPA</div></div>
+      <div class="ach-card glass-card reveal-item" style="animation-delay:0.08s"><div class="ach-icon">⭐</div><div class="ach-val cyan-text" data-target="20">0</div><div class="ach-label">O GRADES</div></div>
+      <div class="ach-card glass-card reveal-item" style="animation-delay:0.16s"><div class="ach-icon">🎤</div><div class="ach-val cyan-text">AI/ML</div><div class="ach-label">TECH TALKS</div></div>
+      <div class="ach-card glass-card reveal-item" style="animation-delay:0.24s"><div class="ach-icon">🤖</div><div class="ach-val cyan-text">AI</div><div class="ach-label">EXPLORER</div></div>
+      <div class="ach-card glass-card reveal-item" style="animation-delay:0.32s"><div class="ach-icon">🔧</div><div class="ach-val cyan-text">Backend</div><div class="ach-label">BUILDER</div></div>
+      <div class="ach-card glass-card reveal-item" style="animation-delay:0.4s"><div class="ach-icon">⚛️</div><div class="ach-val cyan-text">Quantum</div><div class="ach-label">EXPLORER</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section">
+  <div class="section-header">
+    <div class="section-tag">// CONTACT TERMINAL</div>
+    <h2 class="section-title hologram-flicker">Terminal</h2>
+    <div class="section-sub">ENCRYPTED CHANNEL // OPEN FOR COMMS</div>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="terminal glass-card reveal-item">
+      <div class="term-bar">
+        <div class="term-dot red-dot"></div>
+        <div class="term-dot yellow-dot"></div>
+        <div class="term-dot green-dot"></div>
+        <div class="term-title">namita@NS — terminal v3.0</div>
+      </div>
+      <div class="term-body" id="term-body">
+        <div class="term-line"><span class="term-prompt">namita@NS:~$</span><span class="term-cmd"> ./initiate_contact.exe</span></div>
+        <div class="term-out">[ OK ] Secure channel initialized</div>
+        <div class="term-out">[ OK ] Identity: Namita Shastri // CSE Student | AI/ML | Backend | Leader</div>
+        <div class="term-out">[ OK ] Open for: Internships | Research | Collaborations | Speaking</div>
+        <div class="term-out term-ready">[ READY ] Type a command or send a message...</div>
+        <div class="term-out term-hint">[ HINT ] Try: skills · certificates · goals · github · linkedin</div>
+        <div id="term-log"></div>
+      </div>
+      <div class="term-input-row">
+        <span class="term-prompt-inline">$</span>
+        <input type="text" id="term-input" class="term-input" placeholder="Type command or message..." autocomplete="off" />
+        <button class="term-send" id="term-send">SEND ↗</button>
+      </div>
+    </div>
+
+    <div class="contact-links reveal-item" style="animation-delay:0.2s">
+      <a href="https://www.linkedin.com/in/namita-shastri-a14a09360/" target="_blank" class="contact-link glass-card">
+        <div class="contact-icon linkedin-icon">in</div>
+        <div class="contact-info"><div class="contact-platform">LINKEDIN</div><div class="contact-handle">Namita Shastri</div></div>
+        <div class="contact-arrow">→</div>
+      </a>
+      <a href="https://github.com/NamitaShastri" target="_blank" class="contact-link glass-card">
+        <div class="contact-icon github-icon">⬡</div>
+        <div class="contact-info"><div class="contact-platform">GITHUB</div><div class="contact-handle">NamitaShastri</div></div>
+        <div class="contact-arrow">→</div>
+      </a>
+      <a href="mailto:shastrinamita08@gmail.com" class="contact-link glass-card">
+        <div class="contact-icon email-icon">@</div>
+        <div class="contact-info"><div class="contact-platform">EMAIL</div><div class="contact-handle">shastrinamita08@gmail.com</div></div>
+        <div class="contact-arrow">→</div>
+      </a>
+      <a href="#" class="contact-link glass-card" id="resume-link">
+        <div class="contact-icon resume-icon">↓</div>
+        <div class="contact-info"><div class="contact-platform">RESUME</div><div class="contact-handle">Download PDF</div></div>
+        <div class="contact-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">NS<span class="logo-accent">://</span></div>
+    <div class="footer-text">NAMITA SHASTRI — DIGITAL COMMAND CENTER © 2026</div>
+    <div class="footer-status"><span class="status-dot"></span><span>ALL SYSTEMS OPERATIONAL</span></div>
+  </div>
+</footer>
+
+<script src="bg.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
